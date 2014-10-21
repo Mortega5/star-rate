@@ -1,26 +1,32 @@
 <!doctype html>
 <html>
-<head>
+    <head>
 
-  <title>Star rating Demo</title>
+        <title>Star rating Demo</title>
 
-  <script src="http://centauro.ls.fi.upm.es/bower_components/platform/platform.js"></script>
-  <link rel="import" href="star-rate.html">
+        <script src="http://centauro.ls.fi.upm.es/bower_components/platform/platform.js"></script>
+        <link rel="import" href="star-rate.html">
+        <style>
+            .starStyle {
+                color: gold;
+                fill: #0b50bf;
+                border-color: red;
+            }
+        </style>
+    </head>
+    <body unresolved>
+        <h2>Default</h2>
+        <star-rate></star-rate>
 
-</head>
-<body unresolved>
-	<h2>Default</h2>
-    <star-rate></star-rate>
+        <h2>Custom number of stars</h2>
+        <star-rate stars="10"></star-rate>
 
-    <h2>Custom number of stars</h2>
-    <star-rate stars="10"></star-rate>
-    
-    <h2>Default rate selected</h2>
-    <star-rate stars="10" rate="3"></star-rate>
+        <h2>Default rate selected</h2>
+        <star-rate stars="10" value="3"></star-rate>
 
-    <h2>Custom styles</h2>
-    <div class="custom-wrapper">
-      <star-rate stars="10" rate="3" class="custom-class"></star-rate>
-    </div>
-</body>
-</html>
+        <h2>Custom styles</h2>
+        <star-rate class="starStyle" stars="10" value="3"></star-rate>
+        <h2>ReadOnly</h2>
+        <star-rate stars="5" value="2.5"  readOnly=true></star-rate>
+    </body>
+        </html>

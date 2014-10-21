@@ -1,16 +1,16 @@
 <link rel="import" href="http://centauro.ls.fi.upm.es/bower_components/polymer/polymer.html">
 <link rel="import" href="http://centauro.ls.fi.upm.es/bower_components/core-icons/core-icons.html">
 
-<polymer-element name="star-rate" attributes="stars value default readOnly">
+<polymer-element name="star-rate" attributes="stars value readOnly">
 
     <template>
-
-        <link href="star-rate.css" rel="stylesheet" />
-
         <div>
             <template repeat="{{n in currentStars}}" >
-
-
+                <style>
+                    core-icon:hover {
+                        cursor:pointer;
+                    }
+                </style>
                 <core-icon icon="{{n <= value ? 'star' : 'star-outline'}}"  hidden?="{{(n-value)==0.5}}" data-item="{{n}}" on-mouseout="{{onMouseout}}" on-click="{{setvalue}}">
                     <div flex style="width: 100%; height: 100%" layout horizontal>
                         <div flex on-mouseover="{{halfStar}}" style="width: 50%;height: 100%" data-item="{{n-0.5}}"></div>
@@ -37,10 +37,10 @@
             readOnly: false,
             rated: false,
             stars: 5,
-            value : 0,
+            value : this.default,
 
             onHovered: function(e,d,t) {
-                if (!this.readOnly || !this.rated){
+                if (!this.readOnly && !this.rated){
                     this.value = parseFloat(t.dataset.item, 10 );
                 }
             },
@@ -51,30 +51,28 @@
                 for (var i = 0; i<= this.stars - 1; i++) {
                     this.currentStars.push(i+1);
                 };
+                this.default = this.value;
             },
 
             setvalue: function(e,d,t) {
-                if (!this.onylRead || !this.rated) {
+                if (!this.onylRead &&!this.rated) {
                     this.value = parseFloat(t.dataset.item, 10 );
-                    this.readOnly= true;
                     this.rated=true;
                 }
             },
             halfStar: function(e,d,t) {
-                if (!this.readOnly || !this.rated) {
+                if (!this.readOnly &&!this.rated) {
                     this.value = parseFloat(t.dataset.item,10);
-                    console.log("Lado izquierdo, value: "+this.value);
                 }
             },
 
             fullStar: function(e,d,t) {
-                if (!this.readOnly || !this.rated) {
+                if (!this.readOnly &&!this.rated) {
                     this.value = parseFloat(t.dataset.item,10);
-                    console.log("Lado derecho, value: "+this.value);
                 }
             },
             onMouseout: function(e,d,t) {
-                if (!this.readOnly || !this.rated) {
+                if (!this.readOnly &&!this.rated) {
                     this.value=this.default;
                 }
             }

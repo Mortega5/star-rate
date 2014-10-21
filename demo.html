@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>Star rating Demo</title>
+
+  <script src="http://centauro.ls.fi.upm.es/bower_components/platform/platform.js"></script>
+  <link rel="import" href="star-rate.html">
+
+</head>
+<body unresolved>
+	<h2>Default</h2>
+    <star-rate></star-rate>
+
+    <h2>Custom number of stars</h2>
+    <star-rate stars="10"></star-rate>
+    
+    <h2>Default rate selected</h2>
+    <star-rate stars="10" rate="3"></star-rate>
+
+    <h2>Custom styles</h2>
+    <div class="custom-wrapper">
+      <star-rate stars="10" rate="3" class="custom-class"></star-rate>
+    </div>
+</body>
+</html>

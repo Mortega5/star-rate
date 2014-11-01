@@ -3,8 +3,9 @@ polymer-star-rate
 
 A Polymer element for star ratings
 
-> Created by Miguel Ortega (https://github.com/Mortega5).
+[Created] Created by Miguel Ortega (https://github.com/Mortega5).
 
+[DEMO] 
 
 ## Options
 

@@ -2,7 +2,7 @@
   "name": "star-rate",
   "private": false,
   "keywords" : [
-  	"web_components",
+  	"web-components",
   	"star",
   	"rating",
   	"rate"

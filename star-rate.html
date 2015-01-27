@@ -61,7 +61,7 @@
                 }
             },
             halfStar: function(e,d,t) {
-                if (!this.readOnly &&!this.rated) {
+                if (!this.onlyRead &&!this.rated) {
                     this.value = parseFloat(t.dataset.item,10);
                 }
             },

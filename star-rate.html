@@ -55,13 +55,13 @@
             },
 
             setvalue: function(e,d,t) {
-                if (!this.onylRead &&!this.rated) {
+                if (!this.readOnly &&!this.rated) {
                     this.value = parseFloat(t.dataset.item, 10 );
                     this.rated=true;
                 }
             },
             halfStar: function(e,d,t) {
-                if (!this.onlyRead &&!this.rated) {
+                if (!this.readOnly &&!this.rated) {
                     this.value = parseFloat(t.dataset.item,10);
                 }
             },

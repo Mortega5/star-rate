@@ -1,18 +1,20 @@
 {
   "name": "star-rate",
   "private": false,
-  "keywords" : [
-  	"web-components",
-  	"star",
-  	"rating",
-  	"rate"
+  "keywords": [
+    "web-components",
+    "star",
+    "rating",
+    "rate"
   ],
   "authors": [
     "Miguel Ortega Moreno"
-  ],  
-  "description" : "Polymer Web Component to deal with star rating",
-  "license" : "Apache",
+  ],
+  "description": "Polymer Web Component to deal with star rating",
+  "license": "Apache",
   "dependencies": {
-    "polymer": "Polymer/polymer#master"
+    "polymer": "Polymer#^1.5.0",
+    "iron-icon": "PolymerElements/iron-icon#^1.0.8",
+    "iron-icons": "PolymerElements/iron-icons#^1.1.3"
   }
 }

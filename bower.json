@@ -1,5 +1,6 @@
 {
   "name": "star-rate",
+  "version":1.2"
   "private": false,
   "keywords": [
     "web-components",
@@ -13,8 +14,7 @@
   "description": "Polymer Web Component to deal with star rating",
   "license": "Apache",
   "dependencies": {
-    "polymer": "Polymer#^1.5.0",
-    "iron-icon": "PolymerElements/iron-icon#^1.0.8",
-    "iron-icons": "PolymerElements/iron-icons#^1.1.3"
+    "polymer": "Polymer#^1.2.1",
+    "iron-icons": "PolymerElements/iron-icons#1.2.1"
   }
 }
